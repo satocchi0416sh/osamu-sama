@@ -1,0 +1,91 @@
+.app-wrapper{
+    padding:30px;
+    background-color: #ffffff;
+    width: 500px;
+    margin:0 auto;
+    margin-top:100px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.493);
+}
+.app-wrapper .container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.app-wrapper .container .top input{
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+}
+.app-wrapper .container .top textarea{
+    width: 100%;
+    min-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+.app-wrapper .container .top label{
+    font-size: 18px;
+}
+.app-wrapper .container .file-input{
+    display: none;
+}
+.app-wrapper .container .imgs{
+    margin-top: 20px;
+}
+
+.app-wrapper .container .imgs .app-img{
+    height:100px;
+    margin:5px;
+    float: left;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+}
+
+
+.app-wrapper .container .imgs .input-btn{
+    position: relative;
+    float: left;
+    width: 100px;
+    margin:5px;
+    background-color: rgba(255, 255, 255, 0.11);
+    height: 100px;
+    border:1px solid rgba(0, 0, 0, 0.247);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.app-wrapper .container .imgs .input-btn:hover{
+    border:2px solid rgba(0, 0, 0, 0.247);
+}
+
+.app-wrapper .container .imgs .input-btn .plus-img{
+    display: block;
+    width: 80px;
+    margin:0 auto;
+}
+
+.app-wrapper .container .imgs .input-btn p{
+    position: absolute;
+    top:65px;
+    left:10px;
+    color: rgb(223, 89, 241);
+}
+
+@media screen and (max-width:600px) {
+    .app-wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px) {
+    .app-wrapper{
+        width: 95%;
+    }
+    .app-wrapper .container .imgs .input-btn{
+        width: 60px;
+        height: 70px;
+    }
+    .app-wrapper .container .imgs .input-btn p{
+        display: none;
+    }
+    
+}

@@ -1,0 +1,19 @@
+.inquiry{
+    margin:30px 0px;
+    border:1px solid;
+    padding:5px;
+}
+.inquiry button{
+    border-radius: 10px;
+    border:none;
+    padding: 3px;
+    
+}
+.zumi{
+    background-color: white;
+    color: rgb(133, 4, 79);
+}
+.nozumi{
+    color: white;
+    background-color: rgb(133, 4, 79);
+}

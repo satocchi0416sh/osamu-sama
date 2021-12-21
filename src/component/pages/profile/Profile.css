@@ -1,0 +1,68 @@
+.profile-page{
+    margin-bottom: 200px;
+}
+.profile-page .info-wrapper{
+    width: 500px;
+    margin:100px auto;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.493);
+    padding:50px;
+    text-align: center;
+}
+.profile-page .info-wrapper h2{
+    font-family:serif;
+    font-size: 25px;
+}
+.profile-page .info-wrapper label{
+    color:rgba(0, 0, 0, 0.781);
+    font-family:serif;
+}
+.profile-page .info-wrapper p{
+    font-weight: 1000;
+    font-size: 20px;
+    font-family:serif;
+}
+
+.profile-page .info-wrapper button{
+    background-color: rgba(247, 0, 255, 0.658);
+    padding: 5px;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.418);
+    margin-top: 10px;
+    width: 200px;
+}
+.profile-page .info-wrapper button:hover{
+    background-color: white;
+    color:rgba(247, 0, 255, 0.658);
+}
+
+.profile-page .info-wrapper input{
+    width: 90%;
+    padding:5px;
+    max-width: 300px;
+}
+.profile-page .info-wrapper select{
+    width: 90%;
+    padding:5px;
+    max-width: 300px;
+}
+.profile-page .info-wrapper textarea{
+    width: 90%;
+    padding:5px;
+    max-width: 300px;
+    height: 100px;
+}
+
+@media screen and (max-width:600px) {
+    .profile-page .info-wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px) {
+    .profile-page .info-wrapper{
+        width: 95%;
+    }
+}

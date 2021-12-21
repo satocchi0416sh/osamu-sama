@@ -1,0 +1,334 @@
+
+/* 全体の枠 */
+.chat-wrapper{
+  background-color: rgb(192, 192, 192);
+  top:0px;
+  left:0px;
+  position: fixed;
+  width:100%;
+  height:100vh;
+}
+.talk {
+  position: fixed;
+  background-color: #f0b9cf; /* LINEっぽい背景色 */
+  padding:80px 1em;
+  height: 70vh;
+  overflow-y: scroll;
+  width:500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  
+}
+
+
+.talk p {
+  color: #f5f5f5;
+}
+
+/* 左のトークボックス */
+.talk .talk-left-img {
+  /* 左の丸アイコン */
+  background-color: rgb(63, 63, 63);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  vertical-align: bottom;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+.talk .talk-left p:before {
+  /* 左ふきだしの左三角を描画 */
+  content: url("../../images/talk-chip.svg");
+  position: absolute;
+  top: calc(100% - 32px);
+  left: -33px;
+  fill: #474747;
+  z-index: -1;
+}
+
+.talk .talk-left {
+  margin-top: 1em;
+  position: relative;
+  margin-bottom: 30px;
+}
+.talk .talk-left label{
+  position:absolute;
+  top:-19px;
+}
+.talk .talk-left p {
+  /* 左ふきだしの本体 */
+  display: inline-block;
+  max-width: 80%;
+  position: relative;
+  background-color: #474747;
+  border-radius: 32px;
+  padding: 20px;
+  margin: 0 0 0 10px;
+  z-index: 1;
+}
+
+/* 右のトークボックス */
+.talk .talk-right-img {
+  /* 右の丸アイコン */
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  vertical-align: bottom;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background-size: cover;
+}
+.talk .talk-right {
+  width: fit-content;
+  margin: 1em 1em 0 auto;
+  position: relative;
+}
+.talk .talk-right label{
+  position:absolute;
+  top:-20px;
+  right:0px;
+}
+.talk .talk-right p:after {
+  /* 右ふきだしの右三角を描画 */
+  content: url("../../images/talk-chip-right.svg");
+  position: absolute;
+  top: calc(100% - 32px);
+  right: -33px;
+  z-index: -1;
+}
+.talk .talk-right p {
+  /* 右ふきだしの本体 */
+  display: inline-block;
+  word-break: break-all;
+  max-width: 60vw;
+  position: relative;
+  background-color: #c70452;
+  border-radius: 32px;
+  padding: 20px;
+  margin: 0 10px 0 0;
+  z-index: 1;
+}
+
+.talk .time-stamp {
+  color: #f5f5f5;
+  font-size: 12px;
+  margin: 10px;
+  vertical-align: bottom;
+}
+
+.chatTop{
+  position:fixed;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:80px;
+  width:500px;
+  border-radius: 5px;
+  background-color: #c70452;
+  z-index: 2;
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.26);
+}
+
+
+.chatTop h2{
+  float:left;
+  margin-left: 20px;
+  margin-top: 20px;
+  color:white;
+}
+
+.chatTop h2 i{
+  cursor: pointer;
+}
+.chatMiddle{
+  margin-top:90px;
+}
+
+.chatBottom{
+  position: fixed;
+  background-color: white;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:80px;
+  width:501px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+  text-align: center;
+}
+
+.chatBottom input{
+  margin-top:15px;
+  padding:5px;
+  width:300px;
+}
+.chatBottom p{
+  cursor: pointer;
+  width: 100px;
+  margin:0 auto;
+  transition: 0.3s;
+}
+.chatBottom p:hover{
+  margin:0 auto;
+  font-weight: 1000;
+}
+
+.chatBottom button{
+  background-color: #c70452;
+  color: white;
+  border:none;
+  padding:5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chatBottom2{
+  position: fixed;
+  background-color: white;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:300px;
+  width:501px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+  text-align: center;
+  padding: 10px;
+}
+
+.chatBottom2 input{
+  margin-top:15px;
+  padding:5px;
+  width:300px;
+}
+.chatBottom2 p{
+  cursor: pointer;
+  width: 100px;
+  margin:0 auto;
+  transition: 0.3s;
+}
+.chatBottom2 p:hover{
+  margin:0 auto;
+  font-weight: 1000;
+}
+
+.chatBottom2 button{
+  background-color: #c70452;
+  color: white;
+  margin: 10px;
+  border:none;
+  padding:8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.talk-left h5{
+  color: #474747;
+}
+
+.talk-right h5{
+  color: #474747;
+  text-align: right;
+}
+
+.chatBottom2 .input-btn{
+  position: relative;
+  width: 100px;
+  margin:5px;
+  height: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.chatBottom2 .input-btn .plus-img{
+  display: block;
+  height:100px;
+  margin:0 auto;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.459);
+}
+
+.chatBottom2 .input-btn p{
+  top:65px;
+  left:0px;
+  color: rgb(223, 89, 241);
+}
+
+.chatBottom2 .file-input{
+  display: none;
+}
+
+.chatBottom2 .send-img{
+  height: 200px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.514);
+}
+
+.talk .img-right{
+  width: 250px;
+  float: right;
+}
+
+.talk .img-left{
+  width: 250px;
+  float: left;
+}
+.time-right{
+  float: right;
+  color: #474747;
+}
+.time-left{
+  color: #474747;
+}
+
+@media screen and (max-width:600px) {
+  .chatBottom{
+    bottom: -30px;
+    left: 50%;
+    height:80px;
+    width:100%;
+    box-shadow: none;
+  }
+  .chatBottom input{
+    margin-top:25px;
+    padding:5px;
+    width:80%;
+  }
+
+  .chatBottom2{
+    left: 50%;
+    bottom: -150px;
+    width:100%;
+    box-shadow: none;
+  }
+
+  .chatTop{
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:70px;
+    width:100%;
+    background-color: #c70452;
+  }
+  .talk {
+    position: fixed;
+    background-color: #f0b9cf; /* LINEっぽい背景色 */
+    padding:120px 1em;
+    height: 90vh;
+    overflow-y: scroll;
+    top:45%;
+    width:100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    
+  }
+}
+@media screen and (max-width:400px) {
+  
+}

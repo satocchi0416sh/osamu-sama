@@ -1,0 +1,110 @@
+.selectChat-page{
+    padding:100px 0px;
+}
+.selectChat-page .container{
+    width: 500px;
+    margin:0 auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.342);
+}
+
+.selectChat-page .container .selecter{
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.selectChat-page .container .selecter img{
+    width: 80px;
+    border-radius: 50px;
+    border:1px solid rgba(0, 0, 0, 0.199);
+    float: left;
+}
+.selectChat-page .container .selecter .chat-info{
+    float: left;
+    padding:0px 10px;
+    max-height: 70px;
+    width: 400px;
+    overflow: hidden;
+}
+.selectChat-page .container .selecter .chat-info h2{
+    float: left;
+}
+.selectChat-page .container .selecter .chat-info h4{
+    float: right;
+}
+.selectChat-page .container .selecter .chat-info h5{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 100;
+}
+.selectChat-page .container .selecter .chat-info .midoku{
+    font-size: 18px;
+    font-weight: 100;
+    position: absolute;
+    top:40px;
+    right: 20px;
+    padding:5px;
+    color: white;
+    border-radius: 30px;
+    background-color: #99173c;
+}
+
+.selectChat-page .container .selecter .chat-info .kidoku{
+    font-size: 18px;
+    font-weight: 100;
+    position: absolute;
+    top:40px;
+    right: 20px;
+    padding:5px;
+    color: #99173c;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+
+@media screen and (max-width:600px) {
+    .selectChat-page .container{
+        width: 100%;
+    }
+    .selectChat-page .container .selecter img{
+        width: 50px;
+    }
+    .selectChat-page .container .selecter .chat-info{
+        width: 80%;
+        max-height: 45px;
+    }
+
+    .selectChat-page .container .selecter .chat-info h2{
+        font-size: 18px;
+    }
+    .selectChat-page .container .selecter .chat-info h4{
+        font-size: 13px;
+    }
+    .selectChat-page .container .selecter .chat-info h5{
+        margin-top: 0px;
+        font-size: 15px;
+    }
+    .selectChat-page .container .selecter .chat-info .midoku{
+        font-size: 15px;
+        font-weight: 100;
+        position: absolute;
+        top:30px;
+        right: 10%;
+        padding:5px;
+        color: white;
+        border-radius: 30px;
+        background-color: #99173c;
+    }
+    
+    .selectChat-page .container .selecter .chat-info .kidoku{
+        font-size: 15px;
+        font-weight: 100;
+        position: absolute;
+        top:30px;
+        right: 10%;
+        padding:5px;
+        color: #99173c;
+        border-radius: 30px;
+        background-color: #ffffff;
+    }
+}

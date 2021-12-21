@@ -1,0 +1,107 @@
+.thre-wrapper{
+    padding:20px;
+    background-color: #ffffff;
+    width: 500px;
+    margin:30px auto;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.493);
+}
+
+.thre-wrapper .top{
+    display: flex;
+    cursor: pointer;
+}
+
+.thre-wrapper .top img{
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.493);
+}
+.thre-wrapper .top h2{
+    margin-top: 10px;
+    margin-left:10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.thre-wrapper .top h2:hover{
+    color: rgba(0, 0, 0, 0.637);
+}
+.thre-wrapper .info label{
+    font-size: 15px;
+    margin-left:5px;
+}
+
+.thre-wrapper .man label{
+    border-bottom: 2px solid rgb(0, 153, 255);
+}
+.thre-wrapper .woman label{
+    border-bottom: 2px solid rgb(247, 0, 255);
+}
+.thre-wrapper .main{
+    margin-top: 20px;
+}
+.thre-wrapper .imgs{
+    margin-top: 20px;
+}
+
+.thre-wrapper .imgs img{
+    height:100px;
+    margin:5px;
+    float: left;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+}
+
+.thre-wrapper .bottom{
+    margin-top: 10px;
+}
+.thre-wrapper button{
+    background-color: rgba(247, 0, 255, 0.658);
+    padding: 5px;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.418);
+}
+.thre-wrapper button:hover{
+    background-color: white;
+    color:rgba(247, 0, 255, 0.658);
+}
+
+.open-img{
+    background-color: #2e26339d;
+    position: fixed;
+    justify-content: center;
+    top:0px;
+    left:0px;
+    height: 100vh;
+    width: 100vw;
+}
+.open-img .container{
+    position: relative;
+    height: 100vh;
+}
+.open-img img{
+    position: absolute;
+    width: 300px;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.651);
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+@media screen and (max-width:600px) {
+    .thre-wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px) {
+    .thre-wrapper{
+        width: 95%;
+    }
+    .thre-wrapper .info label{
+        font-size: 11px;
+        margin-left:5px;
+    }
+}

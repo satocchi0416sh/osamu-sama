@@ -1,0 +1,136 @@
+.top-page {
+  margin-top: 50px;
+}
+
+.mAlert{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  border: #b91a47 1px solid;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.top-page .container {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-page .container button {
+  font-size: 15px;
+  display: block;
+  float: left;
+  background-color: white;
+  border: 2px solid #99173ca9;
+  margin: 20px 5px;
+  padding: 15px;
+  width: 48%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-page .container button:hover {
+  background-color: #99173c;
+  color: white;
+}
+
+.app-btn {
+  display: block;
+  width: 300px;
+  margin: 50px auto;
+  background-color: #99173c;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.363);
+  transition: 0.3s;
+}
+
+.app-btn:hover {
+  background-color: white;
+  color: #99173c;
+}
+
+.fade {
+  animation: fadeIn 20s ease 0.3s 1 normal;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-page .container button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app-btn {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .top-container {
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+  .main {
+    display: block;
+    margin-right: 20px;
+  }
+  .sidebar {
+    width: 250px;
+    margin-left: 30px;
+    margin-top: 150px;
+  }
+
+  .sidebar__item {
+    margin-bottom: 20px;
+  }
+  .sidebar__item--fixed {
+    position: sticky;
+    margin-bottom: 0;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .sidebar__item--fixed img {
+    width: 100%;
+  }
+}
