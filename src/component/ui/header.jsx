@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { AccountCircle, AddCircleOutline, Chat, ExpandLess, ExpandMore, Home, LoginOutlined, LogoutOutlined, MenuSharp, Settings, Help} from "@mui/icons-material"
+import { AccountCircle, AddCircleOutline, Chat, ExpandLess, ExpandMore, Home, LoginOutlined, LogoutOutlined, MenuSharp, Settings, Help } from "@mui/icons-material"
 import { AppBar, Badge, Button, Collapse, Divider, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Modal, Stack, ThemeProvider, Toolbar, Tooltip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { memo } from "react"
@@ -76,7 +76,6 @@ const Header = memo((props) => {
                     </ListItemIcon>
                     <ListItemText primary="チャット" />
                 </ListItemButton>
-
                 <ListItemButton
                     onClick={() => {
                         setDrawerOpen(false)
@@ -89,7 +88,6 @@ const Header = memo((props) => {
                     </ListItemIcon>
                     <ListItemText primary="お問い合わせ" />
                 </ListItemButton>
-
                 <ListItemButton
                     onClick=
                     {() => {
@@ -211,7 +209,7 @@ const Header = memo((props) => {
                 <AppBar position="static">
                     {isLoggedIn ?
                         <Toolbar>
-                            <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ flexGrow: 1 }} ><Typography component="h1" variant="h6">OTOJO（おとじょ）<Typography component="span" variant="caption">- 女装子/ニューハーフ/男の娘の出会い系サイト</Typography></Typography></Box>
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                                 <Tooltip title="トップ" arrow>
                                     <IconButton size="large" aria-label="show 4 new mails" color="inherit"
@@ -299,7 +297,7 @@ const Header = memo((props) => {
                         </Toolbar>
                         :
                         <Toolbar>
-                            <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ flexGrow: 1 }} ><Typography component="h1" variant="h6">OTOJO（おとじょ）<Typography component="span" variant="caption">- 女装子/ニューハーフ/男の娘の出会い系サイト</Typography></Typography></Box>
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                                 <Tooltip title="トップ" arrow>
                                     <IconButton size="large" aria-label="show 4 new mails" color="inherit"
@@ -363,7 +361,7 @@ const Header = memo((props) => {
                     }
                 </AppBar>
             </Box>
-        </ThemeProvider >
+        </ThemeProvider>
     )
 })
 export default Header

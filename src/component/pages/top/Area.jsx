@@ -92,7 +92,7 @@ function Area(props) {
 
                     const i = getRandomInt(LeaderBoard.length)
                     return (
-                        <a href={LeaderBoard[i].url} target="_blank"><img className="img" style={{ width: "500px" }} src={LeaderBoard[i].img} alt="ad" /></a>
+                        <a href={LeaderBoard[i].url} target="_blank"><img className="img" style={{ width: "90%", maxWidth:"500px" }} src={LeaderBoard[i].img} alt="ad" /></a>
                     )
                 })()}
 
@@ -113,7 +113,7 @@ function Area(props) {
 
                                             const i = getRandomInt(Rect.length)
                                             return (
-                                                <a href={Rect[i].url}><img className="img" style={{ width: "500px" }} src={Rect[i].img} alt="ad" /></a>
+                                                <a href={Rect[i].url}><img className="img" style={{ width: "90%", maxWidth:"500px" }} src={Rect[i].img} alt="ad" /></a>
                                             )
                                         })()}
 

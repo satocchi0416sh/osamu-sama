@@ -66,6 +66,10 @@ function Top(props) {
                 >
                     <AlertTitle>注意</AlertTitle>
                     ここに注意事項が入ります。 — <strong>強調することもできます。</strong>
+                    <br/>１．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br/>２．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br/>３．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br/>４．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
                 </Alert>
             </Collapse>
             <div className="container">

@@ -31,20 +31,33 @@ function SignUp() {
     /*登録ボタンが押されたとき */
     const register = (e) => {
         e.preventDefault()
-        setPassErr(false)
-        if (password === passCheck) {
-            setIsRegistered(true)
-            Axios.post("https://dark-tanushimaru-0706.lolipop.io/signup", {
-                name: name,
-                email: email,
-                password: password,
-                age: age,
-                area: area,
-                category: category
-            })
-        } else {
-            setPassErr(true)
+        if(name === "" || email === "" || password === "" || passCheck === "" || area === "" || category === ""){
+            alert("入力に不備があります。")
+        }else{
+            setPassErr(false)
+            if (password === passCheck) {
+                Axios.post("https://dark-tanushimaru-0706.lolipop.io/signup", {
+                    name: name,
+                    email: email,
+                    password: password,
+                    age: age,
+                    area: area,
+                    category: category
+                }).then((response) => {
+                    console.log(response.data)
+                    if(response.data.result){
+                        setIsRegistered(true)
+                    }else{
+                        alert("このメールアドレスは既に登録されています")
+                    }
+                })
+            } else {
+                setPassErr(true)
+            }
         }
+        
+        
+        
 
     }
 
