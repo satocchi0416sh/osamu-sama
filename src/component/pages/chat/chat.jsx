@@ -11,6 +11,7 @@ const Chat = (props) => {
     const [message, setMessage] = useState("")
     const [ mode, setMode ] = useState(false)
     const [ image, setImage ] = useState("")
+    const [ email, setEmail ] = useState("")//相手ユーザーのメールアドレス
     const [ openImage, setOpenImage ] = useState("")
     const messagesEndRef = useRef(null)
     const history = useHistory()
@@ -19,10 +20,15 @@ const Chat = (props) => {
     
     useEffect(() => {
         Axios.get(`https://dark-tanushimaru-0706.lolipop.io/getMessages/${id}/${rId}`)
-            .then((response) => {
-                setMessageList(response.data);
-                console.log(response.data)
-            })
+        .then((response) => {
+            setMessageList(response.data);
+            console.log(response.data)
+        })
+        Axios.get(`https://dark-tanushimaru-0706.lolipop.io/getEmail/${rId}`)
+        .then((response) => {
+            console.log(response.data.email)
+            setEmail(response.data.email)
+        })
     }, [id, rId])
 
     useEffect(() => {

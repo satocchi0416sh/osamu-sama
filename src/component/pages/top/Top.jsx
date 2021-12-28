@@ -80,6 +80,8 @@ function Top(props) {
                     )
                 })}
                 <div className="clear-left"></div>
+                <iframe src="https://www.mmaaxx.com/table/dx/9103042/index.html?affid=222309" maxWidth="600" frameborder="no" scrolling="no" title="DXLiveオンラインバナー"></iframe>
+
             </div>
         </div >
     )
