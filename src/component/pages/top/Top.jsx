@@ -4,12 +4,13 @@ import { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import "./Top.css"
 import Axios from "axios"
+import { Ad } from "../../../App"
 
 function Top(props) {
     const { id } = props
     const history = useHistory()
 
-    const [isRead, setIsRead ] = useState(false)
+    const [isRead, setIsRead] = useState(false)
 
     const data = [
         { title: "北海道掲示板", link: "hokkaido" },
@@ -29,22 +30,23 @@ function Top(props) {
 
     useEffect(() => {
         Axios.get(`https://dark-tanushimaru-0706.lolipop.io/getNotRead/${id}`)
-        .then((response) => {
-            console.log(response.data)
-            setIsRead(response.data.result)
-        })
-    },[id])
+            .then((response) => {
+                console.log(response.data)
+                setIsRead(response.data.result)
+            })
+    }, [id])
 
     const [open, setOpen] = useState(true);
+
     return (
         <div className="top-page">
             {isRead ?
-            <div onClick={()=>{history.push(`/selectChat/${id}`)}}>
-            <p className="mAlert"><i className="fas fa-envelope-open-text"></i> 新着メッセージがあります</p>
-            <br/><br/>
-            </div>
-            :
-            null
+                <div onClick={() => { history.push(`/selectChat/${id}`) }}>
+                    <p className="mAlert"><i className="fas fa-envelope-open-text"></i> 新着メッセージがあります</p>
+                    <br /><br />
+                </div>
+                :
+                null
             }
 
             <Collapse in={open}>
@@ -66,10 +68,10 @@ function Top(props) {
                 >
                     <AlertTitle>注意</AlertTitle>
                     ここに注意事項が入ります。 — <strong>強調することもできます。</strong>
-                    <br/>１．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
-                    <br/>２．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
-                    <br/>３．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
-                    <br/>４．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br />１．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br />２．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br />３．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                    <br />４．〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
                 </Alert>
             </Collapse>
             <div className="container">
@@ -79,9 +81,10 @@ function Top(props) {
                         <button key={index} onClick={() => { goArea(data.link) }}>{data.title}</button>
                     )
                 })}
-                <div className="clear-left"></div>
-                <iframe src="https://www.mmaaxx.com/table/dx/9103042/index.html?affid=222309" maxWidth="600" frameborder="no" scrolling="no" title="DXLiveオンラインバナー"></iframe>
 
+                <div className="clear-left"></div>
+                {/* 広告 */}
+                <Ad />
             </div>
         </div >
     )

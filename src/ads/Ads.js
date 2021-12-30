@@ -49,3 +49,9 @@ export const Rect = [
         url: "https://desygner.com/free-templates/banner-ads/medium-rectangle/13168/"
     },
 ]
+
+export const Iframe = [
+    '<iframe src="https://www.mmaaxx.com/table/dx/9103042/index.html?affid=222309" width="700" height="200" frameborder="no" scrolling="no" title="DXLiveオンラインバナー"></iframe>',
+    '<iframe src="https://bn.dxlive.com/affiliate/hanamaru/1?affid=222309" width="370" height="700" frameborder="no" scrolling="auto" title="DXLiveオンラインバナー"></iframe>',
+    '<ins class="dmm-widget-placement" data-id="1fd7126bd3fdc55dac7e28e1f51d97f1" style="background:transparent"></ins><script src="https://widget-view.dmm.co.jp/js/placement.js" class="dmm-widget-scripts" data-id="1fd7126bd3fdc55dac7e28e1f51d97f1"></script>'
+]

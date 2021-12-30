@@ -5,6 +5,7 @@ import Thread from "../../ui/Thread"
 import { Pagination } from "@mui/material"
 import { Box } from "@mui/system"
 import { Rect, LeaderBoard } from "../../../ads/Ads"
+import { Ad } from "../../../App"
 
 function Area(props) {
     const { id, username, category, openModal } = props
@@ -12,7 +13,7 @@ function Area(props) {
     const { area } = useParams()
     const history = useHistory()
 
-    const [isRead, setIsRead ] = useState(false)
+    const [isRead, setIsRead] = useState(false)
 
     const ITEMS_IN_PAGE = 10;
     const [currentPage, setCurrentPage] = useState(1);
@@ -27,11 +28,11 @@ function Area(props) {
 
     useEffect(() => {
         Axios.get(`https://dark-tanushimaru-0706.lolipop.io/getNotRead/${id}`)
-        .then((response) => {
-            console.log(response.data)
-            setIsRead(response.data.result)
-        })
-    },[id])
+            .then((response) => {
+                console.log(response.data)
+                setIsRead(response.data.result)
+            })
+    }, [id])
 
 
     useEffect(() => {
@@ -76,23 +77,23 @@ function Area(props) {
     return (
         <div className="top-page top-container" id={"scroll-area"}>
 
-            
+
             <main className="main">
-            {isRead ?
-            <div onClick={()=>{history.push(`/selectChat/${id}`)}}>
-            <p className="mAlert"><i className="fas fa-envelope-open-text"></i> 新着メッセージがあります</p>
-            <br/><br/>
-            </div>
-            :
-            null
-            }
+                {isRead ?
+                    <div onClick={() => { history.push(`/selectChat/${id}`) }}>
+                        <p className="mAlert"><i className="fas fa-envelope-open-text"></i> 新着メッセージがあります</p>
+                        <br /><br />
+                    </div>
+                    :
+                    null
+                }
                 <h1 style={{ textAlign: "center", width: "100%", marginBottom: "30px" }}>{pagettl}</h1>
                 {/* 広告を挿入 */}
                 {(() => {
 
                     const i = getRandomInt(LeaderBoard.length)
                     return (
-                        <a href={LeaderBoard[i].url} target="_blank"><img className="img" style={{ width: "90%", maxWidth:"500px" }} src={LeaderBoard[i].img} alt="ad" /></a>
+                        <a href={LeaderBoard[i].url} target="_blank"><img className="img" style={{ width: "90%", maxWidth: "500px" }} src={LeaderBoard[i].img} alt="ad" /></a>
                     )
                 })()}
 
@@ -113,7 +114,7 @@ function Area(props) {
 
                                             const i = getRandomInt(Rect.length)
                                             return (
-                                                <a href={Rect[i].url}><img className="img" style={{ width: "90%", maxWidth:"500px" }} src={Rect[i].img} alt="ad" /></a>
+                                                <a href={Rect[i].url}><img className="img" style={{ width: "90%", maxWidth: "500px" }} src={Rect[i].img} alt="ad" /></a>
                                             )
                                         })()}
 
@@ -125,7 +126,8 @@ function Area(props) {
                         )
                     return null
                 })}
-
+                {/* 広告 */}
+                <Ad />
                 {id === undefined || id === null ?
                     <button className="app-btn" onClick={() => { history.push("/login") }}>ログインして投稿する</button>
                     :
@@ -135,6 +137,8 @@ function Area(props) {
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 5, mb: 20 }}>
                     <Pagination count={maxPage} size="large" onChange={(e, value) => { setCurrentPage(value); pageDidUpdate(); openModal(); }} />
                 </Box>
+                {/* 広告 */}
+                <Ad />
                 {/* 広告を挿入 */}
                 {(() => {
 

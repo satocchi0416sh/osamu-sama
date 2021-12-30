@@ -16,7 +16,7 @@ import Area from './component/pages/top/Area';
 import { Modal, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
-import { Rect } from './ads/Ads';
+import { Iframe, Rect } from './ads/Ads';
 import Inquiry from './component/pages/inquiry/Inquiry';
 
 const socket = io('https://dark-tanushimaru-0706.lolipop.io')
@@ -90,7 +90,7 @@ function App() {
       sId: id,
       sName: name,
       rId: rId,
-      type:type,
+      type: type,
       text: message,
       date: date,
       time: time,
@@ -169,7 +169,7 @@ function App() {
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     width: "95%",
-                    maxWidth:"500px"
+                    maxWidth: "500px"
                   }}
                   src={Rect[i].img}
                   alt="ad" />
@@ -185,3 +185,10 @@ function App() {
 }
 
 export default App;
+
+export const Ad = () => {
+  const htmlstring = Iframe[Math.floor(Math.random() * Iframe.length)];
+  return (
+    <div dangerouslySetInnerHTML={{ __html: htmlstring }}></div>
+  );
+}
